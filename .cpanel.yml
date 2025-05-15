@@ -1,14 +1,30 @@
+# ---
+# deployment:
+#   tasks:
+#     - |
+#       # Set the deployment path to the public_html directory
+#       DEPLOYPATH=/home/example/public_html/
+
+#       # Copy index.html from the current Git repo folder to the public_html directory
+#       /bin/cp index.html $DEPLOYPATH
+
+#       # Copy style.css from the current Git repo folder to the public_html directory
+#       /bin/cp style.css $DEPLOYPATH
+#       /bin/cp README $DEPLOYPATH
+#       /bin/cp -R images $DEPLOYPATH
+
+
 ---
 deployment:
   tasks:
     - |
       # Set the deployment path to the public_html directory
-      DEPLOYPATH=/home/example/public_html/
+      DEPLOYPATH=/home/Practice/public_html/
 
-      # Copy index.html from the current Git repo folder to the public_html directory
+      # Copy individual files
       /bin/cp index.html $DEPLOYPATH
-
-      # Copy style.css from the current Git repo folder to the public_html directory
       /bin/cp style.css $DEPLOYPATH
       /bin/cp README $DEPLOYPATH
+
+      # Copy entire images directory (recursively)
       /bin/cp -R images $DEPLOYPATH
