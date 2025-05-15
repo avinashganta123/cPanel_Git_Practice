@@ -11,3 +11,4 @@ deployment:
       # Copy style.css from the current Git repo folder to the public_html directory
       /bin/cp style.css $DEPLOYPATH
       /bin/cp README $DEPLOYPATH
+      /bin/cp -R Images $DEPLOYPATH
