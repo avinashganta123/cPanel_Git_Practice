@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachelor's Party Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    <div class="invitation-container">
+        <h1>You're Invited!</h1>
+        <h2>To the Bachelor's Party of</h2>
+        <h1>John Smith</h1>
+        <p>Get ready to celebrate with us as we send off our dear friend into married life!</p>
+
+        <div class="event-details">
+            <div>
+                <h3>Date:</h3>
+                <p>July 20, 2024</p>
+            </div>
+            <div>
+                <h3>Time:</h3>
+                <p>8:00 PM</p>
+            </div>
+            <div>
+                <h3>Location:</h3>
+                <p>The Rusty Mug, Chicago, IL</p>
+            </div>
+        </div>
+        <p>Prepare for a night of fun, laughter, and unforgettable memories.  We'll have food, drinks, and maybe even a surprise or two!</p>
+        <button class="cta-button" id="rsvp-button">RSVP</button>
+
+        <div id="rsvp-form" class="hidden">
+            <h2>RSVP</h2>
+            <form id="actual-rsvp-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit RSVP</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const rsvpButton = document.getElementById("rsvp-button");
+        const rsvpForm = document.getElementById("rsvp-form");
+        const actualRsvpForm = document.getElementById("actual-rsvp-form");
+
+        rsvpButton.addEventListener("click", () => {
+            rsvpForm.classList.toggle("hidden");
+        });
+
+        actualRsvpForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            alert(`Thank you, ${name}! Your RSVP has been received.`);
+            rsvpForm.classList.add("hidden");
+             document.getElementById("name").value = "";
+              document.getElementById("email").value = "";
+
+        });
+    </script>
+</body>
+</html>
