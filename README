@@ -1,0 +1,22 @@
+
+---	                            
+<!-- YAML document start (optional, but good practice) -->
+deployment
+<!-- Main key recognized by cPanel for deployment actions -->
+tasks
+<!-- A list of shell tasks to run after Git pull -->
+DEPLOYPATH=/home/example/public_html/	
+<!-- Defines the path where files will be copied -->
+cp index.html $DEPLOYPATH	
+<!-- Copies index.html to your live site directory -->
+cp style.css $DEPLOYPATH	
+<!-- Copies style.css to your live site directory -->
+
+✅ Requirements
+1. .cpanel.yml must be in the root of your Git repo.
+
+2. Your repo must be set up via cPanel → Git Version Control.
+
+3. After every push to the repo, cPanel will:
+    a. Pull the latest code.
+    b. Run the commands in .cpanel.yml.
