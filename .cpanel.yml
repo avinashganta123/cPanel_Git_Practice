@@ -21,10 +21,10 @@ deployment:
       # Set the deployment path to the public_html directory
       DEPLOYPATH=/home/practice/public_html/
 
-      # Copy individual files
-      /bin/cp index.html $DEPLOYPATH
-      /bin/cp style.css $DEPLOYPATH
-      /bin/cp README $DEPLOYPATH
+      # # Copy individual files
+      # /bin/cp index.html $DEPLOYPATH
+      # /bin/cp style.css $DEPLOYPATH
+      # /bin/cp README $DEPLOYPATH
 
       # Copy entire images directory (recursively)
-      /bin/cp -R images $DEPLOYPATH
+      /bin/cp -r images $DEPLOYPATH
