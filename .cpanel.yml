@@ -19,7 +19,7 @@ deployment:
   tasks:
     - |
       # Set the deployment path to the public_html directory
-      DEPLOYPATH=/home/Practice/public_html/
+      DEPLOYPATH=/home/practice/public_html/
 
       # Copy individual files
       /bin/cp index.html $DEPLOYPATH
